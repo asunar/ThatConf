@@ -1,0 +1,22 @@
+	var showHome = function(){
+		replaceChildren(content, "<div><div>This is home</div></div>");
+	};
+
+
+line 2 throws: Uncaught NotFoundError: Failed to execute 'appendChild' on 'Node': The new child element is null.
+
+Create element:
+	var showHome = function(){
+		var div = document.createElement("div");
+		div.innerHTML = "<h3>This is home</h3>";
+		replaceChildren(content, div );
+	};
+
+
+Forgot to remove the + at the beginning of the template text to concat.
+It was like this
+				var template = 
+				+ "<span>" 
+				.......
+Spent an hour to figure why template was outputting NaN at the beginning.
+

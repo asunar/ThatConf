@@ -1,0 +1,31 @@
+require 'rake'
+require 'rake/clean'
+require 'fileutils'
+
+BUILD_DIR = "testBuild"
+
+CLOBBER.include(BUILD_DIR)
+task :default => "/testBuild/index.html" do
+	puts "Hello world"
+end
+
+task "/testBuild/index.html" => ["index.html", :cleanup] do |file_task|
+	system("mkdir #{BUILD_DIR}")
+	system("cp #{file_task.prerequisites.first} #{BUILD_DIR}")
+	
+end
+
+task :replace_script_references => "/testBuild/index.html" do
+dogru
+end
+
+task :cleanup do
+	system("rake clobber")
+end
+
+
+
+
+
+
+

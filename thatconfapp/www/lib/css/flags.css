@@ -1,0 +1,35 @@
+#container div {
+    background: url(flags_sprite.png) no-repeat top left;
+}
+#container div#alg{ background-position: -0 -0; width: 24px; height: 24px; } 
+#container div#arg{ background-position: 0 -74px; width: 24px; height: 24px; } 
+#container div#aus{ background-position: 0 -148px; width: 24px; height: 24px; } 
+#container div#bel{ background-position: 0 -222px; width: 24px; height: 24px; } 
+#container div#bih{ background-position: 0 -296px; width: 24px; height: 24px; } 
+#container div#bra{ background-position: 0 -370px; width: 24px; height: 24px; } 
+#container div#chi{ background-position: 0 -444px; width: 24px; height: 24px; } 
+#container div#civ{ background-position: 0 -518px; width: 24px; height: 24px; } 
+#container div#cmr{ background-position: 0 -592px; width: 24px; height: 24px; } 
+#container div#col{ background-position: 0 -666px; width: 24px; height: 24px; } 
+#container div#crc{ background-position: 0 -740px; width: 24px; height: 24px; } 
+#container div#cro{ background-position: 0 -814px; width: 24px; height: 24px; } 
+#container div#ecu{ background-position: 0 -888px; width: 24px; height: 24px; } 
+#container div#eng{ background-position: 0 -962px; width: 24px; height: 24px; } 
+#container div#esp{ background-position: 0 -1036px; width: 24px; height: 24px; } 
+#container div#fra{ background-position: 0 -1110px; width: 24px; height: 24px; } 
+#container div#ger{ background-position: 0 -1184px; width: 24px; height: 24px; } 
+#container div#gha{ background-position: 0 -1258px; width: 24px; height: 24px; } 
+#container div#gre{ background-position: 0 -1332px; width: 24px; height: 24px; } 
+#container div#hon{ background-position: 0 -1406px; width: 24px; height: 24px; } 
+#container div#irn{ background-position: 0 -1480px; width: 24px; height: 24px; } 
+#container div#ita{ background-position: 0 -1554px; width: 24px; height: 24px; } 
+#container div#jpn{ background-position: 0 -1628px; width: 24px; height: 24px; } 
+#container div#kor{ background-position: 0 -1702px; width: 24px; height: 24px; } 
+#container div#mex{ background-position: 0 -1776px; width: 24px; height: 24px; } 
+#container div#ned{ background-position: 0 -1850px; width: 24px; height: 24px; } 
+#container div#nga{ background-position: 0 -1924px; width: 24px; height: 24px; } 
+#container div#por{ background-position: -74px 0; width: 24px; height: 24px; } 
+#container div#rus{ background-position: -74px -74px; width: 24px; height: 24px; } 
+#container div#sui{ background-position: -74px -148px; width: 24px; height: 24px; } 
+#container div#uru{ background-position: -74px -222px; width: 24px; height: 24px; } 
+#container div#usa{ background-position: -74px -296px; width: 24px; height: 24px; }

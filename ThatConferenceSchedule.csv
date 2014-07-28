@@ -1,0 +1,162 @@
+Day,Scheduled,Room,Name,Category,Level,Title
+Date Not Scheduled,Time Not Scheduled,,Kenny Young,Cloud,200,Getting the C-Level to level up to the Cloud
+Date Not Scheduled,Time Not Scheduled,,Josh Schultz,Other,100,The Evergreen Developer: Timeless Skills for a Long Career
+Date Not Scheduled,Time Not Scheduled,Room Not Scheduled,Jeff Key,Other,100,Why are you still hard-coding business logic?
+Saturday,8:30 AM,c,That Conference,That Conference,100,GiveCamp and The Humanitarian Toolbox
+Sunday,1:00 PM,D,CoderDojo Chi,Family,300,Kid's Coder Dojo - Choose Your Own Adventure
+Sunday,1:00 PM,B,Ryan Hatch,Other,400,Lean Startup 101 : Accelerating Ideas into Product Success
+Sunday,6:00 PM,Conference Center,That Conference,That Conference,100,Early Registration and Meet and Greet
+Monday,7:30 AM,Mess Hall,That Conference,That Conference,100,Breakfast ( Monday )
+Monday,8:30 AM,Mess Hall,Elizabeth Naramore,Keynote,400,Ripples on the Pond
+Monday,10:30 AM,E,Christopher Woodruff,Mobile,200,Developing Mobile Solutions with Azure Mobile Services in Windows 8.1 and Windows Phone
+Monday,10:30 AM,Tamarind,Jenna Pederson,Web,200,Leave No Trace: Test Driven Development using the SOLID Principles
+Monday,10:30 AM,C,Ryan Niemeyer,Web,200,Oh the Memories! -  An Introduction to Browser Memory Leak Testing
+Monday,10:30 AM,B,Richard Campbell,Other,300,"People, Process, Tools – The Essence of DevOps"
+Monday,10:30 AM,F,Chris Risner,Cloud,200,Pushing Data to Millions of Devices in Seconds
+Monday,10:30 AM,Banyan,Benjamin Gavin,Family,400,Robotics Camp – Arrival – Day 1
+Monday,10:30 AM,Cypress,Emily Davis,Family,100,Teaching Kids to Program
+Monday,10:30 AM,Wisteria,Greg Tarnoff,Other,100,The UX of Stairs - When simple tasks aren’t so simple
+Monday,10:30 AM,Portia,Aaron Hayon,Web,200,Twitter Bootstrap – A Web Developers Best Friend
+Monday,10:30 AM,G,Wade Wegner,Mobile,400,Want to Build an SDK for Your API? Learn Tips from the Trenches
+Monday,10:30 AM,Guava,Nathan Dotz,Other,200,What I wish the older kids had told me about becoming a functional programmer
+Monday,10:30 AM,D,Cori Drew,Other,200,You've used git. You've used TFS. Why aren't you using them together?
+Monday,11:30 AM,Mess Hall,That Conference,That Conference,100,Lunch ( Monday )
+Monday,1:00 PM,Guava,Brent Stineman,Cloud,300,Azure Service Bus – Enabling Internet of Things
+Monday,1:00 PM,D,Jeff Blankenburg,Other,100,Fear
+Monday,1:00 PM,Tamarind,Patrick Seda,Mobile,200,Gamification vs. Motivation in Children's Educational Apps
+Monday,1:00 PM,Mangrove,Alper Sunar,Mobile,100,Hybrid mobile apps don't have to suck: Minimalist's Guide to Building Hybrid Mobile Apps
+Monday,1:00 PM,B,Leon Gersing,Other,100,Leon's Allegory of the Cave
+Monday,1:00 PM,Wisteria,George Heeres,Other,100,Linux for Windows Developers
+Monday,1:00 PM,F,Joe Brinkman,Web,200,MongoDB: The ultimate backpack for the cloud
+Monday,1:00 PM,C,Keith Dahlby,Web,200,One Delegate to Rule Them All: Understanding OWIN
+Monday,1:00 PM,Aralia,Jonathan Mills,Mobile,100,Rocking Out With Android Studio
+Monday,1:00 PM,Portia,Matt Netkow,Mobile,200,Seeing the forest for the trees: Building Fully Featured HTML5 Mobile Apps
+Monday,1:00 PM,G,Joe Eames,Web,200,Slow Roasted AngularJS Best Practices
+Monday,1:00 PM,E,Angela Dugan,Other,300,Structuring Your TFS ALM Environment for the Long Haul
+Monday,1:00 PM,Mess Hall,That Conference,Family,100,That Wildlife
+Monday,2:30 PM,Mangrove,Aaron Hoffman,Other,100,"$0 to $60,000 A Month In 6 Months - A Lean Startup Case Study on Agile Software Architecture"
+Monday,2:30 PM,B,Pete Brown,Other,300,A device in every chicken in every camp pot: IoT and embedded devices for people who love to code and make
+Monday,2:30 PM,G,John Lindquist,Web,200,AngularJS - Top 10 Tips
+Monday,2:30 PM,Guava,Judah Himango,Cloud,200,Call of the Raven: RavenDB for the .NET Camper
+Monday,2:30 PM,Cypress,Phil Van Houten,Family,300,Don't go outside; stay inside and make your first Minecraft mod!
+Monday,2:30 PM,E,Brandon Martinez,Web,200,From Callback Hell to the JavaScript “Promise” Land
+Monday,2:30 PM,Tamarind,Dave Arel,Mobile,300,HTML5 Mobile Apps Don't Have To Suck
+Monday,2:30 PM,F,Lauren Amundson,Other,100,Inspiring a Culture of Innovation
+Monday,2:30 PM,D,Steve Marx,Mobile,300,Syncing Is Hard
+Monday,2:30 PM,Wisteria,Dennis Burton,Cloud,100,The Cloud Mixing Bowl
+Monday,2:30 PM,Portia,Coraline Ehmke,Other,100,The Open Source Survival Guide for Women
+Monday,2:30 PM,C,Bill Wagner,Web,200,Working with TypeScript
+Monday,2:30 PM,Aralia,John Ptacek,Other,100,You Can’t Always Be Hiking – Ways to Hack Your Day to Better Health
+Monday,4:00 PM,D,Jason Follas,Other,100,Bitcoin and Cryptocurrency: How Does It Work?
+Monday,4:00 PM,B,Mike Wood,Cloud,200,Cloud - It's More than Just Virtual Machines
+Monday,4:00 PM,C,Roger Brogan,Mobile,200,Cross Platform Phone Dev with AngularJS and PhoneGap
+Monday,4:00 PM,Guava,Michael Perry,Other,300,Cryptography Ghost Stories
+Monday,4:00 PM,Tamarind,Edward Thomson,Other,400,Deep Dive into Git
+Monday,4:00 PM,G,Russ Unger,Other,100,From Muppets to Mastery: Core UX Principles from Mr. Jim Henson 
+Monday,4:00 PM,F,Evan Carothers,Cloud,200,Google Cloud Platform & App Engine - The Swiss Army Knife PaaS
+Monday,4:00 PM,E,Eric Boyd,Cloud,200,Microsoft Azure Web Sites for the Web Developer
+Monday,4:00 PM,Cypress,Derek Curtis,Family,400,Paddle Your Own Canoe--Navigating the Computer Science Career Backwater                                                                                                                                                            
+Monday,4:00 PM,Wisteria,Cory House,Web,200,Real World Single Page Apps: A Knockout Case Study
+Monday,4:00 PM,Mangrove,Michael Boeke,Other,200,UX Antipatterns: Hidden User Traps in Sites and Apps
+Monday,4:00 PM,Portia,Tim Miller,Mobile,300,Your Future is so Bright You Gotta Wear Shades... or Glass
+Monday,5:30 PM,Conference Center,That Conference,That Conference,100,Happy Hour
+Monday,7:00 PM,Open Spaces Room,That Conference,That Conference,100,Game Night
+Monday,7:00 PM,b,Michael Wheeler,Web,100,That Coderetreat
+Tuesday,7:30 AM,Mess Hall,That Conference,That Conference,100,Breakfast ( Tuesday )
+Tuesday,8:30 AM,Mess Hall,Tim Huckaby,Keynote,200,The Engaging User Experience & the Natural User Interface
+Tuesday,10:30 AM,Cypress,Sharon Cichelli,Family,200,Circuits in Play Dough
+Tuesday,10:30 AM,Tamarind,Travis Stevenson,Cloud,400,Creating The Forest From The Trees:  Installing and Optimizing XEN
+Tuesday,10:30 AM,G,Brent Schooley,Mobile,300,Creating Xamarin Bindings for Native iOS Libraries
+Tuesday,10:30 AM,B,Ryan Anklam,Web,200,Going Node At Netflix
+Tuesday,10:30 AM,E,Beth Tucker Long,Web,200,"I've Been Hacked, Now What?"
+Tuesday,10:30 AM,Wisteria,Brad Marsh,Mobile,100,LigerMobile - Hybrid App Development for the Pragmatic Perfectionist
+Tuesday,10:30 AM,C,Seth Juarez,Other,200,Machine Learning – Recommender Engine and Anomaly Detection
+Tuesday,10:30 AM,Mangrove,gus emery,Web,200,Making Rich Data apps are a Breeze(.js)
+Tuesday,10:30 AM,Guava,Jeremiah Billmann,Web,200,Meet Koa - the next generation web framework for Node.js
+Tuesday,10:30 AM,D,Jimmy Bogard,Other,200,ORMs - you're doing it wrong
+Tuesday,10:30 AM,Banyan,Benjamin Gavin,Family,400,Robotics Camp – Day 2
+Tuesday,10:30 AM,F,Dustin Ewers,Web,200,Telling Campfire Stories with Data: Beautiful Interactive Data Visualizations with D3.js
+Tuesday,10:30 AM,Portia,Kassandra Perch,Web,200,Write Firefox OS apps using the Web Tech you already know
+Tuesday,11:30 AM,Mess Hall,That Conference,That Conference,100,Lunch ( Tuesday )
+Tuesday,1:00 PM,C,Keith Casey,Cloud,200,12 Reasons Your API Sucks
+Tuesday,1:00 PM,Mangrove,Darrel Miller,Mobile,300,Building an API client library that bends but doesn't break
+Tuesday,1:00 PM,B,Matt Milner,Mobile,200,Building cross-platform mobile applications with Xamarin Studio and Azure Mobile Services
+Tuesday,1:00 PM,Tamarind,JC Grubbs,Web,300,Building Web Applications with Elixir
+Tuesday,1:00 PM,D,Brian Hogan,Other,100,Come To The Vim Side
+Tuesday,1:00 PM,Aralia,Matthew Renze,Other,100,Exploratory Data Analysis with R
+Tuesday,1:00 PM,Portia,Susan Yount,Cloud,200,Getting to Know Windows Azure Mobile Services
+Tuesday,1:00 PM,E,Dennis Welu,Mobile,100,Go X-Platform with Xamarin
+Tuesday,1:00 PM,F,Pete Brown,Mobile,300,How to build amazing creative music apps for Windows
+Tuesday,1:00 PM,Cypress,Annalee and Brian Kalbfleisch,Family,200,"Legos, Robotics and Programming"
+Tuesday,1:00 PM,Wisteria,Kevin McMahon,Mobile,100,Securing your Android Apps
+Tuesday,1:00 PM,G,Javier Lozano,Web,200,SignalR All The Things!
+Tuesday,1:00 PM,Guava,Jeremy Green,Web,300,Supercharge your productivity with Ember.js
+Tuesday,2:30 PM,Aralia,Maulan Byron,Cloud,300,Capacity Planning on the Fly
+Tuesday,2:30 PM,G,rob sullivan,Other,100,Enterprise 2.0.0 - Building Apps on the Postgres Framework
+Tuesday,2:30 PM,C,Shay Howe,Web,100,How Constraints Cultivate Growth
+Tuesday,2:30 PM,Portia,Kevin Hakanson,Web,100,"Internationalize your JavaScript Application: Prepare for ""the next billion"" internet users."
+Tuesday,2:30 PM,F,Robert Boedigheimer,Other,300,Keep Your Campfire Secrets...  Secret
+Tuesday,2:30 PM,D,Jeff Weber,Mobile,200,Making A Game With Unity
+Tuesday,2:30 PM,Guava,Jason Young,Cloud,400,Massively Parallel Azure Systems
+Tuesday,2:30 PM,B,Ryan Anklam,Web,300,Rethink Async With RXJS
+Tuesday,2:30 PM,Mangrove,Tom Steele,Mobile,300,Should You Hitch Your Mobile Development Saddle to the Xamarin Horse? (Exploring the Xamarin Option for Cross Platform Mobile Development) 
+Tuesday,2:30 PM,Cypress,Keith Burnell,Family,300,Teaching the Junior Campers to Program with the Grown Up Tools
+Tuesday,2:30 PM,Tamarind,Tony Guidici,Cloud,300,Using HDInisght and Internet of Things To See The Forest For The Trees
+Tuesday,2:30 PM,Wisteria,Kelley Muir,Other,100,UX Stories to Tell in the Dark 
+Tuesday,2:30 PM,E,Greg Levenhagen,Mobile,200,"Write Xbox One, Windows and Windows Phone Apps the Universal Way"
+Tuesday,4:00 PM,Portia,Aaron Douglas,Mobile,300,Advanced Core Data - Much Wow
+Tuesday,4:00 PM,B,Joe Johnston,Other,100,"Design for Sensors, not Screens "
+Tuesday,4:00 PM,Wisteria,Lance Larsen,Mobile,200,"Dude, where's my Camp Site?  Location aware Geo-Fencing maps in your Apps!"
+Tuesday,4:00 PM,Tamarind,Nik Molnar,Web,200,Full Stack Web Performance
+Tuesday,4:00 PM,Cypress,Richard Campbell,Family,100,Internet Safety for Parents and Kids
+Tuesday,4:00 PM,Guava,Ian Muir,Web,200,Let's Hack a Website
+Tuesday,4:00 PM,Aralia,Mike Hodnick,Other,100,Live-Coded Music: electronic campfire sing-alongs of the future
+Tuesday,4:00 PM,C,Josh Gretz,Mobile,100,Marvelous Mobile Ruby Development
+Tuesday,4:00 PM,Mangrove,Eryn O'Neil,Web,100,Programmers Can UX Too
+Tuesday,4:00 PM,E,Ryan Cromwell,Other,100,Sweet Elixir! A Gentle Introduction to Erlang’s cute younger brother Elixir
+Tuesday,4:00 PM,F,Jaim Zuber,Mobile,200,Tales From the Client Side. MVC and Other Patterns for iOS Development
+Tuesday,4:00 PM,G,Jacob Gable,Web,300,What can JavaScript ES6 features do for me today?
+Tuesday,5:30 PM,Mess Hall,That Conference,That Conference,100,That Pig Roast
+Tuesday,10:30 PM,Indoor Waterpark,That Conference,That Conference,100,That Waterpark Party
+Wednesday,7:30 AM,Mess Hall,That Conference,That Conference,100,Breakfast ( Wednesday )
+Wednesday,8:30 AM,Mess Hall,Mike McGee,Keynote,300,How One Year of Crazy Created the New Normal
+Wednesday,10:30 AM,F,Dan Piessens,Cloud,300,Building stable agile cloud applications
+Wednesday,10:30 AM,E,Steven Hoober,Mobile,100,"Design for Fingers, Thumbs, and People: Real World Data and Tactics for Touchscreen Design"
+Wednesday,10:30 AM,Portia,Guy Starbuck,Mobile,300,Digitally Sign on the Dotted Line
+Wednesday,10:30 AM,Guava,Md Khan,Web,200,High Performance JavaScript
+Wednesday,10:30 AM,G,Dan Normington,Mobile,200,Manage your app in the background - Keeping your app alive with background tasks
+Wednesday,10:30 AM,C,Damon Payne,Other,300,Modern GPU Computing
+Wednesday,10:30 AM,D,Mike Ward,Web,200,NancyFx - ASP.NET's Super-Duper-Happy Framework
+Wednesday,10:30 AM,Banyan,Benjamin Gavin,Family,400,Robotics Camp - The Finale - Day 3
+Wednesday,10:30 AM,Cypress,Katelyn Drew,Family,100,Scratch for kids!
+Wednesday,10:30 AM,Wisteria,Mina Markham,Web,200,SMACSS Your Sass Up
+Wednesday,10:30 AM,B,Mike Rohde,Other,100,The Sketchnote Mini-Workshop
+Wednesday,10:30 AM,Tamarind,Paul Drew,Cloud,200,Windows DevOps: Introducing Agile Environments
+Wednesday,11:30 AM,Mess Hall,That Conference,That Conference,100,Lunch ( Wednesday )
+Wednesday,1:00 PM,B,Jim Holmes,Other,200,“OMG! This Codebase Sucks!” Paying Down Technical Debt While Continuing to Deliver Value
+Wednesday,1:00 PM,Aralia,Janie Clayton-Hasz,Mobile,200,All the Audio You Need: Intro to AV Foundation Audio
+Wednesday,1:00 PM,Tamarind,Eric Potter,Other,100,Connecting C# to Arduino and the world outside your computer
+Wednesday,1:00 PM,Wisteria,Mark Greenway,Cloud,200,Cut Your Hair and Get an Azure WebJob!
+Wednesday,1:00 PM,E,Bertine Buchan,Web,200,Front-End Development for Back-End Developers
+Wednesday,1:00 PM,Mangrove,Alex Koppel,Mobile,200,iPads everywhere: Working with tablets at scale
+Wednesday,1:00 PM,D,Tyson Stewart,Cloud,300,Keeping Your Edge by Deploying Faster
+Wednesday,1:00 PM,G,Jason Bock,Other,300,Managing the .NET Compiler
+Wednesday,1:00 PM,Portia,Doug Rhoten,Mobile,100,Objective-C for C# Developers
+Wednesday,1:00 PM,F,Brad Broulik,Web,200,Responsive Web Development Patterns
+Wednesday,1:00 PM,Cypress,Alexander Headley,Family,300,Scratch 2d Game Programming
+Wednesday,1:00 PM,Guava,Lori Lalonde,Mobile,200,Using The Power of Speech In Your Windows Phone Apps
+Wednesday,1:00 PM,C,Eryn O'Neil,Other,200,You're the Tech Lead! Now What?
+Wednesday,2:30 PM,Aralia,Chris Gardner,Other,100,Biometrics: Using Your Body for Fun and Profit
+Wednesday,2:30 PM,C,Vince Bullinger,Mobile,100,Cross-Platform Trek Through the Mobile Development Forest with Titanium
+Wednesday,2:30 PM,Guava,Eric Frost,Web,200,Django Unchained
+Wednesday,2:30 PM,E,Danielle Boldt,Other,100,From Zero to Full Deployment Automation in 60 Minutes
+Wednesday,2:30 PM,B,Jacob Gable,Web,100,Getting Started with Open Source Contributions on Github
+Wednesday,2:30 PM,Portia,Tim Hansen,Cloud,200,HIPAA and Staying Compliant in the Cloud
+Wednesday,2:30 PM,Cypress,Edward Brey,Family,400,How to show kids that coding is even better than the zip line
+Wednesday,2:30 PM,G,Chris Powers,Web,200,"Look Ma, I'm on TV! Developing Apps for the Chromecast"
+Wednesday,2:30 PM,Tamarind,Mike Bluestein,Mobile,200,Making 2D Games that Run Everywhere using C#
+Wednesday,2:30 PM,F,Tony Surma,Mobile,200,Making your Apps Work Deep in the Woods
+Wednesday,2:30 PM,Wisteria,Andrei Marukovich,Mobile,200,Modern desktop apps: get the best of both worlds 
+Wednesday,2:30 PM,Mangrove,Ashley Bennett Ewald,Other,100,Setting Up Camp: 10 Things You Must Do To Create a Successful Startup.
+Wednesday,2:30 PM,D,Todd Gardner,Web,300,Traces of Errors: A Scavenger Hunt for Better JavaScript Stacktraces
+Wednesday,4:00 PM,Mess Hall,That Conference,That Conference,100,Closing Remarks

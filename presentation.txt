@@ -1,0 +1,35 @@
+Who
+Name / github / twitter
+
+What
+We will build a cross platform mobile apps for the conf to illustrate concepts like SPA/routing/templating/testing/packaging/app store submission
+
+
+We will essentially build a web app, package it with PhoneGap so that we can put it in the app store.
+
+The golden rule is PhoneGap apps are web apps.
+
+Ok, so how should we build our app? Use jquerymobile, sencha touch, ionic, angular, backbone, ember react.
+
+Hmm, maybe we should compare each fx and pick the one we like? Tech lock in?
+
+Let's start building the app and pull in libs/fxs if/when we need them.
+
+Routing - Today / Tomorrow / Full Schedule / Speakers / Sessions / My schedule
+
+Theme: State your problem, super reader? Find a solution with minimal dependencies and max maintainability.
+
+hashChange event
+replace children
+
+adapters / localStorage / offline
+
+views / templating / caching compiled templates
+
+ui css :active / hardware acceleration / fastclick
+
+PhoneGap build, configap.
+
+Promise lib to get updates? Updated schedule for ex.
+
+

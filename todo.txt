@@ -1,0 +1,85 @@
+Create outline/slides for each (beginning/middle/end) section of the presentation
+Create sample thatconfapp with videos
+
+1) Start with simple SPA
+<html>
+<body >
+
+<div id="content">
+</div>
+
+
+<script src="src/main.js"></script>
+</body>
+</html>
+
+2) Introduce $ fake jquery function for selecting elements and attaching events
+  $ = function (s) {
+    // querySelectorAll requires a string with a length
+    // otherwise it throws an exception
+    var r = document.querySelectorAll(s || '?'),
+        length = r.length;
+    // if we have a single element, just return that.
+    // if there's no matched elements, return element array to chain from
+    // else return the NodeList collection from qSA
+    return length == 1 ? r[0] :[].slice.call(r);
+  };
+
+3) Create main.js
+(function() {
+
+    /* --------------------------------- Event Registration -------------------------------- */
+    window.addEventListener('hashchange', route);
+
+    /* ---------------------------------- Local Functions ---------------------------------- */
+
+    function replaceChildren(parentElement, children) {
+	parentElement.innerHTML = '';
+	parentElement.appendChild(children);
+    }
+
+    function route() {
+        var hash = window.location.hash;
+	var content = $('#content');
+
+	var showHome = function(){
+		var div = document.createElement("div");
+		div.innerHTML = "<h3>This is home</h3>";
+		replaceChildren(content, div );
+	};
+
+	if(!hash){
+		showHome();
+		return;
+	}
+	
+	var routeTable = {
+	'#home': showHome,
+	};
+
+	routeTable[hash]();
+    }
+
+    route();
+}());
+
+
+
+4) Move html generation to HomeView
+var HomeView = function(adapter) {
+
+    this.initialize = function() {
+        this.el = document.createElement("div");
+    };
+
+    this.render = function() {
+       this.el.innerHTML = "<h3>This is home</h3>";
+       return this.el;
+    };
+
+
+
+    this.initialize();
+}	
+
+5) 
