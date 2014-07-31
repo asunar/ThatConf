@@ -21,7 +21,7 @@
 
 	var showSessions = function(){
 		var sessionsToDisplay = adapter.getSessions();
-		replaceChildren(content, new SessionsView(sessionsToDisplay).render());
+		replaceChildren(content, new SessionsView(sessionsToDisplay, adapter).render());
 	};
 
 	var showSpeakers = function(){
@@ -36,14 +36,14 @@
 	var showSessionsBySpeakers = function(){
 		var speakers = getUrlVars().speakers;
 		var sessionsToDisplay = adapter.getSessionsBySpeaker(speakers);
-		replaceChildren(content, new SessionsView(sessionsToDisplay).render());
+		replaceChildren(content, new SessionsView(sessionsToDisplay, adapter).render());
 
 	};	
 
 	var showFamilySessions = function(){
 		var category = 'Family'; 
 		var sessionsToDisplay = adapter.getSessionsByCategory(category);
-		replaceChildren(content, new SessionsView(sessionsToDisplay).render());
+		replaceChildren(content, new SessionsView(sessionsToDisplay, adapter).render());
 
 	};
 
@@ -71,10 +71,23 @@
 		replaceChildren(content, new SessionsView(sessionsToDisplay).render());
 	};
 
+	var showMySchedule = function() {
+		var sessionsToDisplay = adapter.getSessionsInMySchedule();
+		replaceChildren(content, new SessionsView(sessionsToDisplay, adapter).render());
+	};
+
 	var showSessionsByScheduled = function() {
 		var scheduled = getUrlVars().scheduled;
 		var sessionsToDisplay = adapter.getSessionsByScheduled(scheduled);
 		replaceChildren(content, new SessionsView(sessionsToDisplay).render());
+	};
+
+	var showFaq = function(){
+		replaceChildren(content, new FaqView().render());
+	};
+
+	var showPolicies = function(){
+		replaceChildren(content, new PoliciesView().render());
 	};
 
 	var hashWithoutQueryString = hash;
@@ -92,6 +105,9 @@
 	'#showsessionsbyspeaker': showSessionsBySpeakers,
 	'#familysessions': showFamilySessions,
 	'#sessiondetails': showSessionDetails,
+	'#myschedule': showMySchedule,
+	'#faq': showFaq,
+	'#policies': showPolicies,
 	};
 
 	routeTable[hashWithoutQueryString]();

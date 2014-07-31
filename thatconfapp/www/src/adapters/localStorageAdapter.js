@@ -1,6 +1,8 @@
 var LocalStorageAdapter = function() {
 
     this.initialize = function() {
+			this.populateConfDays();	
+			this.markSessionsInMySchedule();
 		}  
 
     var gridMenuItems =
@@ -13,8 +15,8 @@ var LocalStorageAdapter = function() {
 		],
 
 		[
-		{ id:'lnkMySchedule', url:'#mySchedule', label: 'My Schedule', icon: 'fa fa-check-square-o fa-5x'},
-			{ id:'lnkSponsors', url:'#sponsors', label: 'sponsors', icon: 'fa fa-dollar fa-5x'},
+		{ id:'lnkMySchedule', url:'#myschedule', label: 'My Schedule', icon: 'fa fa-check-square-o fa-5x'},
+			{ id:'lnkSponsors', url:'#faq', label: 'FAQ', icon: 'fa fa-question fa-5x'},
 			{ id:'lnkPolicies', url:'#policies', label: 'Policies', icon: 'fa fa-book fa-5x'},
 		]	
 
@@ -8044,10 +8046,12 @@ return [
   }
 ];
 
+this.populateConfDays();
+
 };
 
 
-this.getSessions = function() {
+this.populateConfDays = function(){
 	var sessionList = [];
 	this.getAcceptedSessionsByTimeSlot().forEach(function(d) {
 			var sessionToAdd = {};
@@ -8061,6 +8065,7 @@ this.getSessions = function() {
 									Category: s.Category,
 									Description: s.Description,
 									ScheduledRoom: s.ScheduledRoom,
+									IsUserFavorite: s.IsUserFavorite,
 									SpeakerNames: s.Speakers.map(function(aSpeaker){
 									 															return aSpeaker.FirstName + " " + aSpeaker.LastName; 
 																							}).join(),
@@ -8074,10 +8079,29 @@ this.getSessions = function() {
 			})
 			sessionList.push(sessionToAdd);
 	})
-	return sessionList;
+
+	localStorage.setItem("TCA:ConfDays", JSON.stringify(sessionList));
 };
 
-    
+this.getSessions = function() {
+	var storedConfDays = JSON.parse(localStorage["TCA:ConfDays"]);
+	var that = this;
+	storedConfDays.forEach(function(d){
+		d.Sessions.forEach(function(s){
+			s.IsInMySchedule = that.isSessionInMySchedule(s.Id);
+		});
+	});
+	return storedConfDays;
+};
+
+this.markSessionsInMySchedule = function(){
+	var sessionIdsInMySchedule = this.getSessionIdsInMySchedule();
+	var that = this;
+	sessionIdsInMySchedule.forEach(function(sessionId){
+		that.getSessionById(sessionId).IsUserFavorite = true;	
+	});
+};    
+
 this.getSpeakers = function () {
  return [
     {
@@ -10475,36 +10499,48 @@ this.getSessionById = function(id){
     })
 };
 
-
-
-
-this.getSessionsFilteredBy = function(sessionProperty, sessionValue){
-	return this.getSessions().filter(function(s){ return s[sessionProperty] === sessionValue });
+this.getSessionIdsInMySchedule = function(){
+	var storedIds = localStorage["TCA:SessionsInMySchedule"]; 
+	if(storedIds){
+		return JSON.parse(storedIds);
+	} else {
+		return []; 
+	}
 };
 
-this.getSessionsByTitle = function(sessionName){
-	return this.getSessionsFilteredBy('title', sessionName);
+this.saveSessionsInMySchedule = function(sessionsInMySchedule){
+	localStorage.setItem("TCA:SessionsInMySchedule", JSON.stringify(sessionsInMySchedule));
 };
 
-
-this.getSessionDetails = function(id){
-	
+this.addToMySchedule = function(id) {
+	var sessionsInMySchedule = this.getSessionIdsInMySchedule();
+	sessionsInMySchedule.push(id);
+	this.saveSessionsInMySchedule(sessionsInMySchedule);
 };
 
-this.getSessionsByLevel = function(level){
-	return this.getSessionsFilteredBy('level', level);
+this.removeFromMySchedule = function(id) {
+	var sessionsInMySchedule = this.getSessionIdsInMySchedule();
+	sessionsInMySchedule = sessionsInMySchedule.filter(function(savedId){ return savedId !== id;   });
+	this.saveSessionsInMySchedule(sessionsInMySchedule);
+}
+
+
+this.getSessionsInMySchedule = function(){
+	var sessionIdsInMySchedule = this.getSessionIdsInMySchedule();
+    return this.getSessions().map(function(d) {
+        return {
+            Day: d.Day,
+            Sessions: d.Sessions.filter(function(s) {
+                return _.contains(sessionIdsInMySchedule, s.Id);
+            })
+        }
+    }).filter(function(day) {
+        return day.Sessions.length > 0;
+    });
 };
 
-this.getSessionsByScheduled = function(scheduled){
-	return this.getSessionsFilteredBy('scheduled', scheduled);
-};
-
-this.getSessionsByRoom = function(room){
-	return this.getSessionsFilteredBy('room', room);
-};
-
-this.getSessionsByDay = function(day){
-	return this.getSessionsFilteredBy('day', day);
+this.isSessionInMySchedule = function(id) {
+	return _.contains(this.getSessionIdsInMySchedule(), id);
 };
 
 this.initialize();
@@ -10512,57 +10548,6 @@ this.initialize();
 
 
 };
-
-
-
-
-/*
-this.getAcceptedSessionsByTimeSlot().map(function(sessionDay) {
-    return { "day" : sessionDay.Day,  sessions: sessionDay.TimeSlots.map(function(ts) {
-        return ts.Sessions.map(function(s) {
-            return {               
-                "scheduled": ts.Time,
-                "title": s.Title,
-                "name": s.Speakers.map(function(speaker) {
-                    return speaker.FirstName + " " + speaker.LastName
-                }).join()
-            };
-        });
-    }) }
-})
- *
-var paulTalks = _.flatten(this.getAcceptedSessionsByTimeSlot().map(function(day){
-     return day.TimeSlots.map(function(ts){
-        return ts.Sessions.map(function(s){
-            return {sessionId: s.Id, Title: s.Title, Speakers: s.Speakers.map(function(speaker){
-                                                          return speaker.UserName;
-                                               }).join()}  
-        });               
-     });
-})).filter(function(sessionSpeaker){
-     return sessionSpeaker.Speakers.indexOf('PaulShepard') !== -1
-})
- 
-var speakerTalks = { speaker: paulTalks[0].Speakers, talks: paulTalks.map(function(pt){ return { Id: pt.sessionId, Title: pt.Title } }) }
- 
-
-
-this.getAcceptedSessionsByTimeSlot().forEach(function(d){
-  d.TimeSlots.forEach(function(ts){
-     ts.Sessions.forEach(function(s){
-       var sessionSpeakers = s.Speakers.map(function(speaker){ return speaker.UserName });
-       if(_.contains(sessionSpeakers, 'bengavin')){
-         matchingSessions.push({ day: d.Day, timeslot: { time: ts.Time, session: s } }); 
-       }
-     })
-  })
-})
-
-
- *
- */ 
-
-
 
 
 
