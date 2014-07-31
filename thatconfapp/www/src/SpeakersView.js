@@ -6,18 +6,13 @@ var SpeakersView = function(speakersToDisplay, adapter) {
 
     this.render = function() {
 				var template = 
-				"<span>"	
+				"<ul>"	
 		+		"{{# .}}"	
-		+		'<div>'
-		+			'{{ name  }}'
-		+			'<ul>'
-		+				'{{#titles }}'
-		+					'<li><a href="#showsessionsbytitle?title={{ . }}">{{ . }}</a></li>'
-		+				'{{/titles }}'
-		+			'</ul>'
-		+		'</div>'
+		+		'<li>'
+		+			'<a href="#showsessionsbyspeaker?speakers={{ UserName }}">{{ FirstName }} {{ LastName }}</a></div>'
+		+		'</li>'
 		+		"{{/.}}"	
-		+		"</span>";	
+		+		"</ul>";	
 
 			var speakersTemplate = Handlebars.compile(template);
       this.el.innerHTML = speakersTemplate(speakersToDisplay);

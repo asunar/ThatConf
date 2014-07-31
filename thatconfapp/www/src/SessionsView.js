@@ -6,16 +6,19 @@ var SessionsView = function(sessionsToDisplay, adapter) {
 
     this.render = function() {
 	var template = " \
-			<table id='container' class='sessionsTable' > \
 			{{#.}} \
-				<tr style='border-bottom: 1px solid #DCDCDC;'> \
-				<td><a href='#showsessionsbyday?day={{ day }}'>{{ day }}</a></td> \
-				<td><a href='#showsessionsbyscheduled?scheduled={{ scheduled }}'>{{ scheduled }}</a></td> \
-				<td>{{ name }}</td> \
-				<td>{{ title }}</td> \
-				</tr> \
+				<div style='margin-top:10px;border-bottom: 5px solid #DCDCDC;'>{{ Day }}</div>  \
+				{{#Sessions}} \
+					{{#.}} \
+				<table id='container'  class='sessionsTable' > \
+					<tr style='border-bottom: 1px solid #DCDCDC;'> \
+					<td style='width:15%'>{{ this.Time }}</td> \
+					<td style='width:85%'>{{ this.Title }}</td> \
+					</tr> \
+				</table> \
+					{{/ .}} \
+				{{/ Sessions}} \
 			{{/ .}} \
-			</table> \
 			  ";
 
 			var sessionsTemplate = Handlebars.compile(template);

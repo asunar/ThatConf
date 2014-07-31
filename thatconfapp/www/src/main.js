@@ -33,6 +33,18 @@
 		return;
 	}
 
+	var showSessionsBySpeakers = function(){
+		var speakers = getUrlVars().speakers;
+		var sessionsToDisplay = adapter.getSessionsBySpeaker(speakers);
+		replaceChildren(content, new SessionsView(sessionsToDisplay).render());
+
+	};	
+	
+	if(!hash){
+		showHome();
+		return;
+	}	
+
 	var showSessionsByTitle = function() {
 		var title = getUrlVars().title;
 		var sessionsToDisplay = adapter.getSessionsByTitle(title);
@@ -63,6 +75,7 @@
 	'#showsessionsbytitle': showSessionsByTitle,
 	'#showsessionsbyday': showSessionsByDay,
 	'#showsessionsbyscheduled': showSessionsByScheduled,
+	'#showsessionsbyspeaker': showSessionsBySpeakers,
 	};
 
 	routeTable[hashWithoutQueryString]();
