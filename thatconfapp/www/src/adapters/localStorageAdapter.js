@@ -9,11 +9,11 @@ var LocalStorageAdapter = function() {
 		[
 			{ id:'lnkSessions', url:'#sessions', label: 'Sessions', icon: 'fa fa-calendar-o fa-5x'},
 			{ id:'lnkSpeakers', url:'#speakers', label: 'Speakers', icon: 'fa fa-user fa-5x'},
-			{ id:'lnkFamilySessions', url:'#familySessions', label: 'Family Sessions', icon: 'fa fa-child fa-5x'},
+			{ id:'lnkFamilySessions', url:'#familysessions', label: 'Family Sessions', icon: 'fa fa-child fa-5x'},
 		],
 
 		[
-			{ id:'lnkMySchedule', url:'#mySchedule', label: 'My Schedule', icon: 'fa fa-check-square-o fa-5x'},
+		{ id:'lnkMySchedule', url:'#mySchedule', label: 'My Schedule', icon: 'fa fa-check-square-o fa-5x'},
 			{ id:'lnkSponsors', url:'#sponsors', label: 'sponsors', icon: 'fa fa-dollar fa-5x'},
 			{ id:'lnkPolicies', url:'#policies', label: 'Policies', icon: 'fa fa-book fa-5x'},
 		]	
@@ -8059,6 +8059,14 @@ this.getSessions = function() {
 									Id: s.Id,
 									Title: s.Title,
 									Category: s.Category,
+									Description: s.Description,
+									ScheduledRoom: s.ScheduledRoom,
+									SpeakerNames: s.Speakers.map(function(aSpeaker){
+									 															return aSpeaker.FirstName + " " + aSpeaker.LastName; 
+																							}).join(),
+									Speakers: s.Speakers.map(function(speaker){
+										return speaker.UserName;
+									}).join(),
 									Time:ts.Time.replace(' AM', 'a').replace(' PM', 'p')
 							})
 					})
@@ -10429,43 +10437,45 @@ this.getSpeakers = function () {
 };
 
 this.getSessionsBySpeaker = function(speakerUserName) {
-    var dayTimeSlots = _.flatten(this.getAcceptedSessionsByTimeSlot().map(function(day) {
-        return day.TimeSlots.map(function(ts) {
-					return {
-						day: day.Day,
-						sessions:             ts.Sessions.map(function(s) {
-																			return {
-																					Time: ts.Time,
-																					sessionId: s.Id,
-																					Title: s.Title,
-																					Speakers: s.Speakers.map(function(speaker) {
-																							return speaker.UserName;
-																					}).join(),
-																					Name: s.Speakers.map(function(speaker) {
-																							return speaker.FirstName + " " + speaker.LastName;
-																					}).join()										
-																			}
-																	})	 
-					}
-        });
-    }));
-
-
-		var finalSessionList = [];
-for(i = 0; i < dayTimeSlots.length; i++){
-   var dayTimeSlot = dayTimeSlots[i];
-   var sessionsInDayTimeSlot = dayTimeSlot.sessions;
-   var matchingSessions = sessionsInDayTimeSlot.filter(function(sidts){
-                               return sidts.Speakers.indexOf(speakerUserName) !== -1;                             
-                          })
-   if(matchingSessions.length > 0) {
-     finalSessionList.push({day: dayTimeSlot.day, sessions:[  matchingSessions]});
-   }
-   
+    return this.getSessions().map(function(d) {
+        return {
+            Day: d.Day,
+            Sessions: d.Sessions.filter(function(s) {
+                return _.contains(s.Speakers, speakerUserName);
+            })
+        }
+    }).filter(function(day) {
+        return day.Sessions.length > 0;
+    })
 }
 
-		return finalSessionList;
+this.getSessionsByCategory = function(category){
+    return this.getSessions().map(function(d) {
+        return {
+            Day: d.Day,
+            Sessions: d.Sessions.filter(function(s) {
+                return s.Category === category;
+            })
+        }
+    }).filter(function(day) {
+        return day.Sessions.length > 0;
+    })
 };
+
+this.getSessionById = function(id){
+    return this.getSessions().map(function(d) {
+        return {
+            Day: d.Day,
+            Sessions: d.Sessions.filter(function(s) {
+                return s.Id === id;
+            })
+        }
+    }).filter(function(day) {
+        return day.Sessions.length > 0;
+    })
+};
+
+
 
 
 this.getSessionsFilteredBy = function(sessionProperty, sessionValue){
@@ -10476,8 +10486,9 @@ this.getSessionsByTitle = function(sessionName){
 	return this.getSessionsFilteredBy('title', sessionName);
 };
 
-this.getSessionsByCategory = function(category){
-	return this.getSessionsFilteredBy('category', category);
+
+this.getSessionDetails = function(id){
+	
 };
 
 this.getSessionsByLevel = function(level){

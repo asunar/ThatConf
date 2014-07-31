@@ -39,11 +39,25 @@
 		replaceChildren(content, new SessionsView(sessionsToDisplay).render());
 
 	};	
-	
+
+	var showFamilySessions = function(){
+		var category = 'Family'; 
+		var sessionsToDisplay = adapter.getSessionsByCategory(category);
+		replaceChildren(content, new SessionsView(sessionsToDisplay).render());
+
+	};
+
 	if(!hash){
 		showHome();
 		return;
 	}	
+
+	var showSessionDetails = function() {
+		var id = parseInt(getUrlVars().id, 10);
+		var sessionToDisplay = adapter.getSessionById(id);
+		replaceChildren(content, new SessionDetailsView(sessionToDisplay).render());
+	};
+
 
 	var showSessionsByTitle = function() {
 		var title = getUrlVars().title;
@@ -76,6 +90,8 @@
 	'#showsessionsbyday': showSessionsByDay,
 	'#showsessionsbyscheduled': showSessionsByScheduled,
 	'#showsessionsbyspeaker': showSessionsBySpeakers,
+	'#familysessions': showFamilySessions,
+	'#sessiondetails': showSessionDetails,
 	};
 
 	routeTable[hashWithoutQueryString]();

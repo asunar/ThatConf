@@ -13,7 +13,7 @@ var SessionsView = function(sessionsToDisplay, adapter) {
 				<table id='container'  class='sessionsTable' > \
 					<tr style='border-bottom: 1px solid #DCDCDC;'> \
 					<td style='width:15%'>{{ this.Time }}</td> \
-					<td style='width:85%'>{{ this.Title }}</td> \
+					<td style='width:85%'><a href='#sessiondetails?id={{ Id }}'>{{ this.Title }}</a></td> \
 					</tr> \
 				</table> \
 					{{/ .}} \
