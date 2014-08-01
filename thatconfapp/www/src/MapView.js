@@ -6,7 +6,7 @@ var MapView = function() {
 
     this.render = function() {
 
-	var markup = '<div id="image" style="height:100%; overflow: auto" ></div>';
+	var markup = '<div id="image" style="height:90%; overflow: auto" ></div>';
        this.el.innerHTML = markup;
        return this.el;
     };
