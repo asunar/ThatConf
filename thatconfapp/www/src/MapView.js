@@ -1,4 +1,4 @@
-var FaqView = function() {
+var MapView = function() {
 
     this.initialize = function() {
         this.el = document.createElement("div");
@@ -6,8 +6,7 @@ var FaqView = function() {
 
     this.render = function() {
 
-			
-			 var markup = '<div>Faq qoes here</div>';
+	var markup = '<div id="image" style="height:100%; overflow: auto" ></div>';
        this.el.innerHTML = markup;
        return this.el;
     };

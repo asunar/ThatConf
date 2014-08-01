@@ -16,8 +16,8 @@ var LocalStorageAdapter = function() {
 
 		[
 		{ id:'lnkMySchedule', url:'#myschedule', label: 'My Schedule', icon: 'fa fa-check-square-o fa-5x'},
-			{ id:'lnkSponsors', url:'#faq', label: 'FAQ', icon: 'fa fa-question fa-5x'},
-			{ id:'lnkPolicies', url:'#policies', label: 'Policies', icon: 'fa fa-book fa-5x'},
+			{ id:'lnkMap', url:'#map', label: 'Map', icon: 'fa fa-map-marker fa-5x'},
+			{ id:'lnkCodeOfConduct', url:'#policies', label: 'Code of Conduct', icon: 'fa fa-book fa-5x'},
 		]	
 
 

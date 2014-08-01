@@ -89,6 +89,16 @@
 	font-size: medium
 	}
 
+		#image { 
+			background-image: url(./images/thatmap.png); 
+	}
+	@media only screen and (max-width: 320px) {
+			#image { 
+					background-image: url(./images/thatmap_small.png); 
+					background-repeat: no-repeat;
+			}
+	}
+
 	i:active, a:active{ color: #C0966D; }
     </style>	 	
 	</head>
@@ -104,7 +114,7 @@
 			<td> <a class="navBarItem" href="#speakers"><i class="fa fa-user fa-w fa-2x"></i></a></td>
 			<td> <a class="navBarItem" href="#familysessions"><i class="fa fa-child fa-w fa-2x"></i></a></td>
 			<td> <a class="navBarItem" href="#myschedule" ><i class="fa fa-check-square-o fa-w fa-2x"></i></a></td>
-			<td> <a class="navBarItem" href="#faq"><i class="fa fa-question fa-w fa-2x"></i></a></td>
+			<td> <a class="navBarItem" href="#map"><i class="fa fa-map-marker fa-w fa-2x"></i></a></td>
 			<td> <a class="navBarItem" href="#policies"><i class="fa fa-book fa-w fa-2x"></i></td>
 		</tr>
 </table>
@@ -118,7 +128,7 @@
 <script src="src/SessionsView.js"></script>
 <script src="src/SessionDetailsView.js"></script>
 <script src="src/SpeakersView.js"></script>
-<script src="src/FaqView.js"></script>
+<script src="src/MapView.js"></script>
 <script src="src/PoliciesView.js"></script>
 <script src="src/main.js"></script>
 </body>

@@ -82,8 +82,8 @@
 		replaceChildren(content, new SessionsView(sessionsToDisplay).render());
 	};
 
-	var showFaq = function(){
-		replaceChildren(content, new FaqView().render());
+	var showMap = function(){
+		replaceChildren(content, new MapView().render());
 	};
 
 	var showPolicies = function(){
@@ -106,7 +106,7 @@
 	'#familysessions': showFamilySessions,
 	'#sessiondetails': showSessionDetails,
 	'#myschedule': showMySchedule,
-	'#faq': showFaq,
+	'#map': showMap,
 	'#policies': showPolicies,
 	};
 
