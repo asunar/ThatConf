@@ -3,6 +3,12 @@
 
 		alert('inside main.js');
 		var adapter = new LocalStorageAdapter();
+		
+		if(window.addEventListener) {
+			alert(window.addEventListener);
+		} else {
+			alert('no addEventListener');
+		}
 
     /* --------------------------------- Event Registration -------------------------------- */
     window.addEventListener('hashchange', route);
