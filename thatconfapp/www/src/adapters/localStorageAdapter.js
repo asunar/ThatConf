@@ -1,7 +1,9 @@
 var LocalStorageAdapter = function() {
 
     this.initialize = function() {
+			alert('populating ls');
 			this.populateConfDays();	
+			alert('marking sessions');
 			this.markSessionsInMySchedule();
 		}  
 
