@@ -115,6 +115,7 @@
 
 	routeTable[hashWithoutQueryString]();
     }
-
+	
+		alert('calling route');
     route();
 })();
