@@ -1,4 +1,5 @@
 (function() {
+		alert('inside main.js');
 		var adapter = new LocalStorageAdapter();
 
     /* --------------------------------- Event Registration -------------------------------- */
@@ -15,6 +16,7 @@
         var hash = window.location.hash;
 	var content = $('#content');
 
+		alert('inside route');
 	var showHome = function(){
 		replaceChildren(content, new HomeView(adapter).render());
 	};
@@ -29,6 +31,7 @@
 		replaceChildren(content, new SpeakersView(speakersToDisplay).render());
 
 	};	if(!hash){
+		alert('running showHome');
 		showHome();
 		return;
 	}
