@@ -1,22 +1,13 @@
 (function() {
 
 
-		alert('inside main.js');
 		var adapter = new LocalStorageAdapter();
-		
-		if(window.addEventListener) {
-			alert(window.addEventListener);
-		} else {
-			alert('no addEventListener');
-		}
 
     /* --------------------------------- Event Registration -------------------------------- */
     window.addEventListener('hashchange', route);
 
     /* ---------------------------------- Local Functions ---------------------------------- */
 
-				alert('calling route');
-    route();
 
     function replaceChildren(parentElement, children) {
 	parentElement.innerHTML = '';
@@ -27,7 +18,6 @@
         var hash = window.location.hash;
 	var content = $('#content');
 
-		alert('inside route');
 	var showHome = function(){
 		replaceChildren(content, new HomeView(adapter).render());
 	};
@@ -42,7 +32,6 @@
 		replaceChildren(content, new SpeakersView(speakersToDisplay).render());
 
 	};	if(!hash){
-		alert('running showHome');
 		showHome();
 		return;
 	}
@@ -127,6 +116,5 @@
 	routeTable[hashWithoutQueryString]();
     }
 	
-		alert('calling route');
     route();
 })();
