@@ -1,4 +1,6 @@
 (function() {
+
+
 		alert('inside main.js');
 		var adapter = new LocalStorageAdapter();
 
@@ -6,6 +8,9 @@
     window.addEventListener('hashchange', route);
 
     /* ---------------------------------- Local Functions ---------------------------------- */
+
+				alert('calling route');
+    route();
 
     function replaceChildren(parentElement, children) {
 	parentElement.innerHTML = '';
