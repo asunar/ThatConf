@@ -5,6 +5,7 @@ var LocalStorageAdapter = function() {
 			this.markSessionsInMySchedule();
 		}  
 
+
     var gridMenuItems =
     { rows:
 	[
