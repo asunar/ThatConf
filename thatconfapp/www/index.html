@@ -1,107 +1,16 @@
 <html>
 	<head>
 		<meta name="viewport" content="width=device-width,initial-scale=1" />
-
+		
 		<title>ThatConf App</title>
+		<link rel="stylesheet" href="./lib/css/normalize.css">
+		<link rel="stylesheet" href="./lib/css/main.css">
 		<link rel="stylesheet" href="./lib/font-awesome/css/font-awesome.min.css">
-
-   <style type="text/css" media="all">
-
-	 body{
-		font-family: "Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
-		width: 100%;
-		height: 100%;
-		position: fixed;
-		margin: 0;
-		padding: 0;
-		background-color: #23211d;
-		color: white;			
-		font-weight: bold;
-	 }	 
-
-	 a {
-		color: white;			
-		text-decoration: none;
-	 }
-	 table {
-					font-weight: bold;
-					border-collapse: collapse;
-					border-color:white;
-
-	 }
-	.gridMenuContainer {
-
-	width:100%;
-	height:100%;
-	font-size: larger;
-	}
-
-	.gridMenuItem { 
-	text-align:center; 
-	}
-
-	.gridMenuItem > div {
-	margin-top: 10%;
-	font-size: larger;
-	}
-
-	.navBarItem {
-	text-decoration: none;
-	color: white
-	}
-
-	.matchListTableContainer {
-	border-bottom: solid 1px #474747;
-	color:green; 
-	}
-
-	.sessionsTable {
-	width:100%;	
-	border-collapse: collapse;
-	border-color:white;
-	}
-
-	.noMatch {
-	color:green; 
-	}	
-
-	.teamList{
-	background-color:#00CD00;
-	color: white;
-	width:100%;
-	font-size: medium;
-	}
-
-	.teamNameLink{
-	color: white;
-	text-decoration:none;
-	}
-
-	.groupLink {
-	text-decoration: none;
-	color: green;
-	}
-
-	.groupListTable {
-	background-color: #00CD00;
-	color: white;
-	width: 100%;
-	font-size: medium
-	}
-
-		#image { 
-			background-image: url(./images/thatmap.png); 
-			background-repeat: no-repeat;
-	}
-	@media only screen and (max-width: 320px) {
-			#image { 
-					background-image: url(./images/thatmap_small.png); 
-					background-repeat: no-repeat;
-			}
-	}
-
-	i:active, a:active{ color: #C0966D; }
-    </style>	 	
+		<script type="text/javascript" charset="utf-8">
+			window.addEventListener('load', function() {
+			    FastClick.attach(document.body);
+			}, false);			
+		</script>
 	</head>
 <body >
 
@@ -120,6 +29,7 @@
 		</tr>
 </table>
 
+<script src="lib/fastclick.js"></script>
 <script src="lib/$.min.js"></script>
 <script src="lib/helper_functions.js"></script>
 <script src="lib/lodash.min.js"></script>
@@ -132,13 +42,11 @@
 <script src="src/MapView.js"></script>
 <script src="src/PoliciesView.js"></script>
 <script src="src/main.js"></script>
-<!--
         <script type="text/javascript" src="phonegap.js"></script>
         <script type="text/javascript" src="js/index.js"></script>
         <script type="text/javascript">
             app.initialize();
     </script>
-		-->
 
 </body>
 </html>
