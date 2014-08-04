@@ -111,6 +111,7 @@ textarea {
 	 a {
 		color: white;			
 		text-decoration: none;
+		-webkit-touch-callout: none;
 	 }
 	 table {
 					font-weight: bold;
