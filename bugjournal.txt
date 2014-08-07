@@ -1,3 +1,4 @@
+--------------------------------------
 	var showHome = function(){
 		replaceChildren(content, "<div><div>This is home</div></div>");
 	};
@@ -12,11 +13,17 @@ Create element:
 		replaceChildren(content, div );
 	};
 
-
+-----------------
 Forgot to remove the + at the beginning of the template text to concat.
 It was like this
 				var template = 
 				+ "<span>" 
 				.......
 Spent an hour to figure why template was outputting NaN at the beginning.
-
+-------------
+script filename was localStorageAdapter.js(note the lowercase l) however the it was referenced
+using ...src="LocalStorageAdapter.js". The app worked on my machine and in PhoneGap developer app but failed on the device
+used PhoneGap build debug to find out that the error was ReferenceError: Cannot find LocalStorageAdapter. 
+Took me several hours to determine that the cause was the inconsistent casing. Fixed reference, everything started working.
+------------
+If you add new test devices, generate a new mobileprovision file and upload it to PhoneGap build (Doh!)
