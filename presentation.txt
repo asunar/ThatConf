@@ -1,8 +1,15 @@
+Hello everyone, thanks for coming.
+
+You're in Minimalist's Guide to Building Hybrid Mobile Apps.
+
+My name is
 Who
-Name / github / twitter
+Name / github / twitter /Paylocity
 
 What
 We will build a cross platform mobile apps for the conf to illustrate concepts like SPA/routing/templating/testing/packaging/app store submission
+
+
 
 
 We will essentially build a web app, package it with PhoneGap so that we can put it in the app store.
