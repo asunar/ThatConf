@@ -56,11 +56,6 @@
 
         };
 
-        if (!hash) {
-            showHome();
-            return;
-        }
-
         var showSessionDetails = function() {
             var id = parseInt(getUrlVars().id, 10);
             var sessionToDisplay = adapter.getSessionById(id);
