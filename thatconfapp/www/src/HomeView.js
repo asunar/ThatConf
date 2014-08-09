@@ -13,7 +13,7 @@ var HomeView = function(adapter) {
 		+			"{{#.}}"	
 		+			"<td style='width: 33%' class='gridMenuItem'>"
 		+			"<a href={{ url }} class='navBarItem' >"	
-		+			"<i class='{{ icon }}'></i><div>{{ label }}</div>"
+		+			"<i class='{{ icon }} fa-5x'></i><div>{{ label }}</div>"
 		+			"</a>"
 		+			"</td>"
 		+			"{{/.}}"
